@@ -1,6 +1,6 @@
 #ifndef ABSTRACT_IFCS_H
 #define ABSTRACT_IFCS_H
-//v1-08.04.21
+//v2-09.04.21
 //input
 class Abstract_iPort
 {
@@ -24,6 +24,7 @@ public:
 	virtual operator int() { return (GetState() == false) ? 0 : 1; };
 	virtual void PullH() = 0;
 	virtual void PullD() = 0;
+	virtual void PushPull() =0;
 	virtual void SetSpeed(unsigned int speed) = 0;
 	virtual ~Abstract_iBit() {}
 };
